@@ -8,9 +8,15 @@
 
 class LameSolver {
 public:
-    LameSolver();
+    LameSolver(double a, double E, double q, double pMax, double pK);
 
     double Solve();
+private:
+    double a; // внутренний диаметр, который нам известен
+    double E; // модуль юнга
+    double q; // внешнее и внутренне напряжение, в задаче равны
+    double pMax; // максимальное давление
+    double pK; // необходимый запас проности
 };
 
 

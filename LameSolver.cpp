@@ -4,9 +4,17 @@
 
 #include "LameSolver.h"
 
-LameSolver::LameSolver() {}
+#include <iostream>
+#include <cmath>
+
+LameSolver::LameSolver(double a, double E, double q, double pMax, double pK) :
+        a(a), E(E), q(q), pMax(pMax), pK(pK) {
+}
 
 double LameSolver::Solve() {
-    return 1.0;
+    double b = (q * a) / (q - pK * pMax);
+    double c = sqrt(a * b);
+    double delta = c * (pMax / E);
+    return delta;
 }
 
