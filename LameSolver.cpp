@@ -17,4 +17,3 @@ double LameSolver::Solve() {
     double delta = c * (pMax / E);
     return delta;
 }
-
